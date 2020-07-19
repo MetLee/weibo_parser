@@ -50,7 +50,7 @@ def parser_bot(update: Update, context: CallbackContext):
     try:
         text = update.channel_post.text
         entities = update.channel_post.entities
-        if not re.findall(r'Media\n\n', '', text):
+        if not re.findall(r'Media\n\n', text):
             return
         text_without_media = re.sub(r'Media\n\n', '', text)
         media = []
